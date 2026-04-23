@@ -1,6 +1,7 @@
 package net.caelum.poolmod.block;
 
 import net.caelum.poolmod.PoolMod;
+import net.caelum.poolmod.block.custom.EraserBlock;
 import net.caelum.poolmod.item.ModItems;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
@@ -61,7 +62,13 @@ public class ModBlocks {
             () -> new Block(BlockBehaviour.Properties.of()
                     .strength(4f)
                     .sound(SoundType.LODESTONE)
-                    .requiresCorrectToolForDrops()));
+                    .requiresCorrectToolForDrops()
+            ));
+    public static final DeferredBlock<Block> CHALK_VOID_POOLTILE_BLOCK = registerBlock("cv_pooltile_block",
+            () -> new EraserBlock(BlockBehaviour.Properties.of()
+                    .strength(-1f)
+                    .sound(SoundType.DEEPSLATE_TILES)
+            ));
     private static <T extends Block> DeferredBlock<T> registerBlock(String name, Supplier<T> block) {
         DeferredBlock<T> toReturn = BLOCKS.register(name, block);
         registerBlockItem(name, toReturn);
