@@ -1,0 +1,6 @@
+{
+  "parent": "poolmod:block/rc_pooltile_block",
+  "textures": {
+    "all": "poolmod:block/rc_pooltile_block"
+  }
+}

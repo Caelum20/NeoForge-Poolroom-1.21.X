@@ -1,7 +1,18 @@
 {
   "item.poolmod.liminalgae_leaf": "Liminalgae Leaf",
-  "item.poolmod.liminalgae_shard": "Liminalgae Bulb Shard",
+  "item.poolmod.poolfish": "Poolfish",
+  "item.poolmod.chalk": "Chalk",
+
   "block.poolmod.pooltile_block": "Pooltile",
+  "block.poolmod.lc_pooltile_block": "Chalk Left Pooltile",
+  "block.poolmod.rc_pooltile_block": "Chalk Right Pooltile",
+  "block.poolmod.uc_pooltile_block": "Chalk Up Pooltile",
+  "block.poolmod.dc_pooltile_block": "Chalk Down Pooltile",
   "block.poolmod.liminalgae_block": "Liminalgae Leaf Block",
-  "block.poolmod.liminalgae_bulb": "Liminalgae Bulb"
+  "block.poolmod.liminalgae_bulb": "Liminalgae Bulb",
+  "block.poolmod.abyssteel_block": "Abyssteel Block",
+
+  "creativetab.poolmod.poolrooms_layer_one": "Poolroom Layer 1",
+  "creativetab.poolmod.poolrooms_layer_two": "Poolroom Layer 2",
+  "creativetab.poolmod.poolrooms_deep_layer": "Poolroom Deep Layer"
 }

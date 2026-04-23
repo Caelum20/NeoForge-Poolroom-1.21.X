@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "poolmod:block/pooltile_block"
+    }
+  }
+}

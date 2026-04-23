@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:block",
+  "pools": [
+    {
+      "bonus_rolls": 0.0,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "poolmod:liminalgae_bulb"
+        }
+      ],
+      "rolls": 2.0
+    }
+  ],
+  "random_sequence": "poolmod:block/liminalgae_bulb"
+}

@@ -1,0 +1,6 @@
+{
+  "parent": "poolmod:block/abyssteel_block",
+  "textures": {
+    "all": "poolmod:block/abyssteel_block"
+  }
+}

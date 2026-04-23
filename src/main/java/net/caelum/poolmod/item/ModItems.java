@@ -1,6 +1,7 @@
 package net.caelum.poolmod.item;
 
 import net.caelum.poolmod.PoolMod;
+import net.caelum.poolmod.item.custom.ChalkItem;
 import net.minecraft.world.item.Item;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredItem;
@@ -11,8 +12,11 @@ public class ModItems {
 
     public static final DeferredItem<Item> LIMINALGAE_LEAF = ITEMS.register("liminalgae_leaf",
             () -> new Item(new Item.Properties()));
-    public static final DeferredItem<Item> LIMINALGAE_SHARD = ITEMS.register("liminalgae_shard",
+    public static final DeferredItem<Item> POOLFISH = ITEMS.register("poolfish",
             () -> new Item(new Item.Properties()));
+
+    public static final DeferredItem<Item> CHALK = ITEMS.register("chalk",
+            () -> new ChalkItem(new Item.Properties().durability(64)));
 
 
     public static void register(IEventBus eventBus) {
