@@ -28,8 +28,11 @@ public class ModCreativeModeTabs {
                         output.accept(ModBlocks.CHALK_VOID_POOLTILE_BLOCK);
                         output.accept(ModBlocks.LIMINALGAE_BLOCK);
                         output.accept(ModItems.LIMINALGAE_LEAF);
+                        output.accept(ModItems.LIMINALGAE_BUD);
                         output.accept(ModItems.POOLFISH);
                         output.accept(ModItems.CHALK);
+                        output.accept(ModItems.CHALK_DUST);
+                        output.accept(ModItems.CHALK_FUEL);
                     }).build());
     public static final Supplier<CreativeModeTab> POOLROOMS_LAYER_TWO_TAB = CREATIVE_MODE_TAB.register("poolrooms_layer_two_tab",
             () -> CreativeModeTab.builder().icon(() -> new ItemStack(ModItems.LIMINALGAE_LEAF.get()))
@@ -39,8 +42,10 @@ public class ModCreativeModeTabs {
                         output.accept(ModBlocks.LIMINALGAE_BLOCK);
                         output.accept(ModBlocks.LIMINALGAE_BULB);
                         output.accept(ModItems.LIMINALGAE_LEAF);
-                        output.accept(ModItems.POOLFISH);
+                        output.accept(ModItems.LIMINALGAE_BUD);
                         output.accept(ModItems.CHALK);
+                        output.accept(ModItems.CHALK_DUST);
+                        output.accept(ModItems.CHALK_FUEL);
                     }).build());
     public static final Supplier<CreativeModeTab> POOLROOMS_DEEP_LAYER_TAB = CREATIVE_MODE_TAB.register("poolrooms_deep_layer_tab",
             () -> CreativeModeTab.builder().icon(() -> new ItemStack(ModBlocks.ABYSSTEEL_BLOCK.get()))

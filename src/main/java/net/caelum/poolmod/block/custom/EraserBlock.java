@@ -9,10 +9,8 @@ import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.item.ItemEntity;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.item.Items;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.phys.BlockHitResult;
 
@@ -34,7 +32,7 @@ public class EraserBlock extends Block{
     public void stepOn(Level level, BlockPos pos, BlockState state, Entity entity) {
         if(entity instanceof ItemEntity itemEntity) {
             if(itemEntity.getItem().getItem() == ModItems.CHALK.get()) {
-                itemEntity.setItem(new ItemStack(Blocks.AIR, itemEntity.getItem().getCount()));
+                itemEntity.setItem(new ItemStack(ModItems.CHALK_DUST.get(), itemEntity.getItem().getCount()));
             }
         }
 

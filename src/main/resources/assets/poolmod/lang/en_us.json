@@ -1,7 +1,12 @@
 {
   "item.poolmod.liminalgae_leaf": "Liminalgae Leaf",
-  "item.poolmod.poolfish": "Poolfish",
   "item.poolmod.chalk": "Chalk",
+  "item.poolmod.chalk_dust": "Chalk Dust",
+  "item.poolmod.chalk_fuel": "Chalk Fuel",
+
+
+  "item.poolmod.poolfish": "Poolfish",
+  "item.poolmod.liminalgae_bud": "Liminalgae Bud",
 
   "block.poolmod.pooltile_block": "Pooltile",
   "block.poolmod.lc_pooltile_block": "Chalk Left Pooltile",

@@ -10,6 +10,16 @@
         }
       ],
       "rolls": 5.0
+    },
+    {
+      "bonus_rolls": 0.5,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "poolmod:liminalgae_bud"
+        }
+      ],
+      "rolls": 2.0
     }
   ],
   "random_sequence": "poolmod:block/liminalgae_block"
