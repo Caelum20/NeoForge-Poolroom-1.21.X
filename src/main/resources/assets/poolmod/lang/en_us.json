@@ -20,5 +20,10 @@
 
   "creativetab.poolmod.poolrooms_layer_one": "Poolroom Layer 1",
   "creativetab.poolmod.poolrooms_layer_two": "Poolroom Layer 2",
-  "creativetab.poolmod.poolrooms_deep_layer": "Poolroom Deep Layer"
+  "creativetab.poolmod.poolrooms_deep_layer": "Poolroom Deep Layer",
+
+  "tooltip.poolmod.eraser_block.tooltip": "This block erases chalk.",
+  "tooltip.poolmod.chalk.shift_down": "Writes arrows on Pooltiles",
+  "tooltip.poolmod.chalk": "Mark walls with this",
+  "tooltip.poolmod.liminalgae_leaf": "May be beneficial"
 }
