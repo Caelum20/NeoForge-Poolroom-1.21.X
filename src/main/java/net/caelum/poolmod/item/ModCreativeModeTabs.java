@@ -25,7 +25,7 @@ public class ModCreativeModeTabs {
                         output.accept(ModBlocks.LC_POOLTILE_BLOCK);
                         output.accept(ModBlocks.RC_POOLTILE_BLOCK);
                         output.accept(ModBlocks.UC_POOLTILE_BLOCK);
-                        output.accept(ModBlocks.CHALK_VOID_POOLTILE_BLOCK);
+                        output.accept(ModBlocks.CV_POOLTILE_BLOCK);
                         output.accept(ModBlocks.LIMINALGAE_BLOCK);
                         output.accept(ModItems.LIMINALGAE_LEAF);
                         output.accept(ModItems.LIMINALGAE_BUD);

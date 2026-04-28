@@ -40,10 +40,10 @@ public class ModItems {
             );
 
     public static final DeferredItem<Item> LIMINALGAE_LEAF = ITEMS.register("liminalgae_leaf",
-            () -> new FuelItem(new Item.Properties(), 2000
+            () -> new FuelItem(new Item.Properties(), 1200
             ));
     public static final DeferredItem<Item> CHALK_FUEL = ITEMS.register("chalk_fuel",
-            () -> new Item(new Item.Properties()
+            () -> new FuelItem(new Item.Properties(), 2400
             ));
 
 

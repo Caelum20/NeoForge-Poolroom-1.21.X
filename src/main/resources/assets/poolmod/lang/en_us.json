@@ -23,6 +23,7 @@
   "creativetab.poolmod.poolrooms_deep_layer": "Poolroom Deep Layer",
 
   "tooltip.poolmod.eraser_block.tooltip": "This block erases chalk.",
+  "tooltip.poolmod.chalk.ctrl_down": "Dissolves in water",
   "tooltip.poolmod.chalk.shift_down": "Writes arrows on Pooltiles",
   "tooltip.poolmod.chalk": "Mark walls with this",
   "tooltip.poolmod.liminalgae_leaf": "May be beneficial"

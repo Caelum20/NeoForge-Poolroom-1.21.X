@@ -56,6 +56,8 @@ public class ChalkItem extends Item {
     public void appendHoverText(ItemStack stack, TooltipContext context, List<Component> tooltipComponents, TooltipFlag tooltipFlag) {
         if(Screen.hasShiftDown()) {
             tooltipComponents.add(Component.translatable("tooltip.poolmod.chalk.shift_down"));
+        } else if(Screen.hasControlDown()) {
+            tooltipComponents.add(Component.translatable("tooltip.poolmod.chalk.ctrl_down"));
         } else {
             tooltipComponents.add(Component.translatable("tooltip.poolmod.chalk"));
         }

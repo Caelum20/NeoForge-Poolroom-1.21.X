@@ -1,6 +1,0 @@
-{
-  "parent": "poolmod:block/cv_pooltile_block",
-  "textures": {
-    "all": "poolmod:block/cv_pooltile_block"
-  }
-}
