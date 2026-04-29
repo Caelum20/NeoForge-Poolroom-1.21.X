@@ -21,6 +21,8 @@ public class ModCreativeModeTabs {
                     .title(Component.translatable("creativetab.poolmod.poolrooms_layer_one"))
                     .displayItems((itemDisplayParameters, output) -> {
                         output.accept(ModBlocks.POOLTILE_BLOCK);
+                        output.accept(ModBlocks.POOLTILE_STAIR);
+                        output.accept(ModBlocks.POOLTILE_SLAB);
                         output.accept(ModBlocks.DC_POOLTILE_BLOCK);
                         output.accept(ModBlocks.LC_POOLTILE_BLOCK);
                         output.accept(ModBlocks.RC_POOLTILE_BLOCK);
@@ -54,6 +56,7 @@ public class ModCreativeModeTabs {
                     .displayItems((itemDisplayParameters, output) -> {
                         output.accept(ModBlocks.ABYSSTEEL_BLOCK);
                         output.accept(ModBlocks.LIMINALGAE_BULB);
+                        output.accept(ModBlocks.ABYSSTEEL_BULB_BLOCK);
                     })
                     .build());
 

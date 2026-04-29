@@ -27,6 +27,7 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
     @Override
     protected void generate() {
         dropSelf(ModBlocks.ABYSSTEEL_BLOCK.get());
+        dropSelf(ModBlocks.ABYSSTEEL_BULB_BLOCK.get());
         dropSelf(ModBlocks.LIMINALGAE_BULB.get());
 
         add(ModBlocks.LIMINALGAE_BLOCK.get(),

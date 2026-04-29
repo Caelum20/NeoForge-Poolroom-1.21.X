@@ -1,12 +1,15 @@
 package net.caelum.poolmod.block;
 
 import net.caelum.poolmod.PoolMod;
+import net.caelum.poolmod.block.custom.AbysssteelBulbBlock;
 import net.caelum.poolmod.block.custom.EraserBlock;
 import net.caelum.poolmod.item.ModItems;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.SlabBlock;
 import net.minecraft.world.level.block.SoundType;
+import net.minecraft.world.level.block.StairBlock;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredBlock;
@@ -73,6 +76,30 @@ public class ModBlocks {
                     .sound(SoundType.DEEPSLATE_TILES)
                     .noLootTable()
             ));
+
+    public static final DeferredBlock<StairBlock> POOLTILE_STAIR = registerBlock("pooltile_stair",
+            () -> new StairBlock(ModBlocks.POOLTILE_BLOCK.get().defaultBlockState(),
+                    BlockBehaviour.Properties.of()
+                            .strength(-1f)
+                            .sound(SoundType.DEEPSLATE_TILES)
+                            .noLootTable()
+            ));
+
+    public static final DeferredBlock<SlabBlock> POOLTILE_SLAB = registerBlock("pooltile_slab",
+            () -> new SlabBlock(BlockBehaviour.Properties.of()
+                    .strength(-1f)
+                    .sound(SoundType.DEEPSLATE_TILES)
+                    .noLootTable()
+            ));
+
+    public static final DeferredBlock<Block> ABYSSTEEL_BULB_BLOCK = registerBlock("abyssteel_bulb_block",
+            () -> new AbysssteelBulbBlock(BlockBehaviour.Properties.of()
+                    .strength(4f)
+                    .sound(SoundType.GLASS)
+                    .requiresCorrectToolForDrops()
+                    .lightLevel(state -> state.getValue(AbysssteelBulbBlock.CLICKED) ? 15 : 0)
+            ));
+
     private static <T extends Block> DeferredBlock<T> registerBlock(String name, Supplier<T> block) {
         DeferredBlock<T> toReturn = BLOCKS.register(name, block);
         registerBlockItem(name, toReturn);

@@ -9,6 +9,8 @@
   "item.poolmod.liminalgae_bud": "Liminalgae Bud",
 
   "block.poolmod.pooltile_block": "Pooltile",
+  "block.poolmod.pooltile_stair": "Pooltile Stairs",
+  "block.poolmod.pooltile_slab": "Pooltile Slab",
   "block.poolmod.lc_pooltile_block": "Chalk Left Pooltile",
   "block.poolmod.rc_pooltile_block": "Chalk Right Pooltile",
   "block.poolmod.uc_pooltile_block": "Chalk Up Pooltile",
@@ -17,6 +19,7 @@
   "block.poolmod.liminalgae_block": "Liminalgae Leaf Block",
   "block.poolmod.liminalgae_bulb": "Liminalgae Bulb",
   "block.poolmod.abyssteel_block": "Abyssteel Block",
+  "block.poolmod.abyssteel_bulb_block": "Abyssteel Light",
 
   "creativetab.poolmod.poolrooms_layer_one": "Poolroom Layer 1",
   "creativetab.poolmod.poolrooms_layer_two": "Poolroom Layer 2",
