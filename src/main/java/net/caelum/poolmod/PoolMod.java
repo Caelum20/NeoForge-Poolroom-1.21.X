@@ -1,6 +1,7 @@
 package net.caelum.poolmod;
 
 import net.caelum.poolmod.block.ModBlocks;
+import net.caelum.poolmod.component.ModDataComponents;
 import net.caelum.poolmod.item.ModCreativeModeTabs;
 import net.caelum.poolmod.item.ModItems;
 import net.minecraft.world.item.CreativeModeTabs;
@@ -42,6 +43,8 @@ public class PoolMod {
         ModBlocks.register(modEventBus);
 
         ModCreativeModeTabs.register(modEventBus);
+
+        ModDataComponents.register(modEventBus);
 
         // Register the item to a creative tab
         modEventBus.addListener(this::addCreative);

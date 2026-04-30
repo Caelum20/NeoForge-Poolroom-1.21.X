@@ -31,9 +31,27 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .define('C', ModItems.CHALK_DUST.asItem())
                 .unlockedBy("has_chalk_dust", has(ModItems.CHALK_DUST)).save(recipeOutput);
 
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.ABYSSTEEL_BLOCK.get())
+                .pattern("AAA")
+                .pattern("AAA")
+                .pattern("AAA")
+                .define('A', ModItems.ABYSSTEEL.asItem())
+                .unlockedBy("has_abyssteel", has(ModBlocks.ABYSSTEEL_BLOCK.get())).save(recipeOutput);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, ModItems.ABYSSTEEL_PICKAXE.get())
+                .pattern("AAA")
+                .pattern(" S ")
+                .pattern(" S ")
+                .define('A', ModItems.ABYSSTEEL.asItem())
+                .define('S', Items.STICK.asItem())
+                .unlockedBy("has_abyssteel", has(ModBlocks.ABYSSTEEL_BLOCK.get())).save(recipeOutput);
+
         ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.CHALK_FUEL.get(), 4)
                 .requires(ModItems.CHALK_DUST)
                 .unlockedBy("has_chalk_dust", has(ModItems.CHALK_DUST)).save(recipeOutput);
 
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.ABYSSTEEL.get())
+                .requires(ModBlocks.ABYSSTEEL_BLOCK)
+                .unlockedBy("has_abyssteel", has(ModBlocks.ABYSSTEEL_BLOCK.get())).save(recipeOutput);
     }
 }

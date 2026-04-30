@@ -1,11 +1,13 @@
 package net.caelum.poolmod.datagen;
 
 import net.caelum.poolmod.PoolMod;
+import net.caelum.poolmod.block.ModBlocks;
 import net.caelum.poolmod.item.ModItems;
 import net.caelum.poolmod.util.ModTags;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.tags.ItemTagsProvider;
+import net.minecraft.tags.ItemTags;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.level.block.Block;
 import net.neoforged.neoforge.common.data.ExistingFileHelper;
@@ -25,5 +27,7 @@ public class ModItemTagProvider extends ItemTagsProvider {
                 .add(ModItems.CHALK.get())
                 .add(Items.COAL)
                 .add(Items.CHARCOAL);
+        tag(ItemTags.PICKAXES)
+                .add(ModItems.ABYSSTEEL_PICKAXE.get());
     }
 }

@@ -6,6 +6,7 @@ import net.caelum.poolmod.item.custom.FuelItem;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.PickaxeItem;
 import net.minecraft.world.item.TooltipFlag;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredItem;
@@ -21,6 +22,9 @@ public class ModItems {
                     .food(ModFoodProperties.POOLFISH)
             ));
     public static final DeferredItem<Item> CHALK_DUST = ITEMS.register("chalk_dust",
+            () -> new Item(new Item.Properties()
+            ));
+    public static final DeferredItem<Item> ABYSSTEEL = ITEMS.register("abyssteel_ingot",
             () -> new Item(new Item.Properties()
             ));
 
@@ -44,6 +48,11 @@ public class ModItems {
             ));
     public static final DeferredItem<Item> CHALK_FUEL = ITEMS.register("chalk_fuel",
             () -> new FuelItem(new Item.Properties(), 2400
+            ));
+
+    public static final DeferredItem<PickaxeItem> ABYSSTEEL_PICKAXE = ITEMS.register("abyssteel_pickaxe",
+            () -> new PickaxeItem(ModToolTiers.STEEL, new Item.Properties()
+                    .attributes(PickaxeItem.createAttributes(ModToolTiers.STEEL, 1f, -2.8f))
             ));
 
 
