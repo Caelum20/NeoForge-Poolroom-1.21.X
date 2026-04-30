@@ -48,6 +48,7 @@ public class ModCreativeModeTabs {
                         output.accept(ModItems.CHALK);
                         output.accept(ModItems.CHALK_DUST);
                         output.accept(ModItems.CHALK_FUEL);
+                        output.accept(ModItems.DIVING_SUIT);
                     }).build());
     public static final Supplier<CreativeModeTab> POOLROOMS_DEEP_LAYER_TAB = CREATIVE_MODE_TAB.register("poolrooms_deep_layer_tab",
             () -> CreativeModeTab.builder().icon(() -> new ItemStack(ModBlocks.ABYSSTEEL_BLOCK.get()))

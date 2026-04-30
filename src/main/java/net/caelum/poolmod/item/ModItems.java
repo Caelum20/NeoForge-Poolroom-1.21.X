@@ -4,10 +4,7 @@ import net.caelum.poolmod.PoolMod;
 import net.caelum.poolmod.item.custom.ChalkItem;
 import net.caelum.poolmod.item.custom.FuelItem;
 import net.minecraft.network.chat.Component;
-import net.minecraft.world.item.Item;
-import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.item.PickaxeItem;
-import net.minecraft.world.item.TooltipFlag;
+import net.minecraft.world.item.*;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredItem;
 import net.neoforged.neoforge.registries.DeferredRegister;
@@ -53,6 +50,11 @@ public class ModItems {
     public static final DeferredItem<PickaxeItem> ABYSSTEEL_PICKAXE = ITEMS.register("abyssteel_pickaxe",
             () -> new PickaxeItem(ModToolTiers.STEEL, new Item.Properties()
                     .attributes(PickaxeItem.createAttributes(ModToolTiers.STEEL, 1f, -2.8f))
+            ));
+
+    public static final DeferredItem<ArmorItem> DIVING_SUIT = ITEMS.register("diving_suit",
+            () -> new ArmorItem(ModArmorMaterials.ABYSSTEEL_ARMOR_MATERIAL, ArmorItem.Type.CHESTPLATE,
+                    new  Item.Properties().durability(ArmorItem.Type.BODY.getDurability(-1))
             ));
 
 
