@@ -19,7 +19,7 @@ public class ModItems {
                     .food(ModFoodProperties.POOLFISH)
             ));
     public static final DeferredItem<Item> CHALK_DUST = ITEMS.register("chalk_dust",
-            () -> new Item(new Item.Properties()
+            () -> new FuelItem(new Item.Properties(), 2400
             ));
     public static final DeferredItem<Item> ABYSSTEEL = ITEMS.register("abyssteel_ingot",
             () -> new Item(new Item.Properties()
@@ -42,9 +42,6 @@ public class ModItems {
 
     public static final DeferredItem<Item> LIMINALGAE_LEAF = ITEMS.register("liminalgae_leaf",
             () -> new FuelItem(new Item.Properties(), 1200
-            ));
-    public static final DeferredItem<Item> CHALK_FUEL = ITEMS.register("chalk_fuel",
-            () -> new FuelItem(new Item.Properties(), 2400
             ));
 
     public static final DeferredItem<PickaxeItem> ABYSSTEEL_PICKAXE = ITEMS.register("abyssteel_pickaxe",

@@ -19,27 +19,29 @@ import net.minecraft.world.level.storage.loot.providers.number.UniformGenerator;
 
 import java.util.Set;
 
-public class ModBlockLootTableProvider extends BlockLootSubProvider {
+public class ModBlockLootTableProvider  extends BlockLootSubProvider {
     protected ModBlockLootTableProvider(HolderLookup.Provider registries) {
         super(Set.of(), FeatureFlags.REGISTRY.allFlags(), registries);
     }
 
     @Override
     protected void generate() {
-        dropSelf(ModBlocks.ABYSSTEEL_BLOCK.get());
+        dropSelf(ModBlocks.ABYSSTEEL_GRATE.get());
         dropSelf(ModBlocks.ABYSSTEEL_BULB_BLOCK.get());
         dropSelf(ModBlocks.LIMINALGAE_BULB.get());
 
         add(ModBlocks.LIMINALGAE_BLOCK.get(),
-                block -> createMultipleOreDrops(ModBlocks.LIMINALGAE_BLOCK.get(), ModItems.LIMINALGAE_LEAF.get(), 3, 6));
+                block -> createMultipleOreDrops(ModBlocks.LIMINALGAE_BLOCK.get(), ModItems.LIMINALGAE_LEAF.get(), 2, 5));
+        add(ModBlocks.FLOWERING_LIMINALGAE_BLOCK.get(),
+                block -> createMultipleOreDrops(ModBlocks.FLOWERING_LIMINALGAE_BLOCK.get(), ModItems.LIMINALGAE_BUD.get(), 1, 3));
     }
 
     protected LootTable.Builder createMultipleOreDrops(Block pBlock, Item item, float minDrops, float maxDrops) {
-        HolderLookup.RegistryLookup<Enchantment> registryLookup = this.registries.lookupOrThrow(Registries.ENCHANTMENT);
+        HolderLookup.RegistryLookup<Enchantment> registrylookup = this.registries.lookupOrThrow(Registries.ENCHANTMENT);
         return this.createSilkTouchDispatchTable(pBlock,
                 this.applyExplosionDecay(pBlock, LootItem.lootTableItem(item)
                         .apply(SetItemCountFunction.setCount(UniformGenerator.between(minDrops, maxDrops)))
-                        .apply(ApplyBonusCount.addOreBonusCount(registryLookup.getOrThrow(Enchantments.FORTUNE)))));
+                        .apply(ApplyBonusCount.addOreBonusCount(registrylookup.getOrThrow(Enchantments.FORTUNE)))));
     }
 
     @Override

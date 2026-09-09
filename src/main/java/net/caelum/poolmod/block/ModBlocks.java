@@ -4,13 +4,13 @@ import net.caelum.poolmod.PoolMod;
 import net.caelum.poolmod.block.custom.AbysssteelBulbBlock;
 import net.caelum.poolmod.block.custom.EraserBlock;
 import net.caelum.poolmod.item.ModItems;
+import net.minecraft.core.BlockPos;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
-import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.SlabBlock;
-import net.minecraft.world.level.block.SoundType;
-import net.minecraft.world.level.block.StairBlock;
+import net.minecraft.world.level.BlockGetter;
+import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockBehaviour;
+import net.minecraft.world.level.block.state.BlockState;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredBlock;
 import net.neoforged.neoforge.registries.DeferredRegister;
@@ -21,12 +21,26 @@ public class ModBlocks {
     public static final DeferredRegister.Blocks BLOCKS =
             DeferredRegister.createBlocks(PoolMod.MOD_ID);
 
+    private static boolean never(BlockState state, BlockGetter blockGetter, BlockPos pos) {
+        return false;
+    }
+
     public static final DeferredBlock<Block> LIMINALGAE_BLOCK = registerBlock("liminalgae_block",
             () -> new Block(BlockBehaviour.Properties.of()
                     .strength(.2f)
                     .sound(SoundType.GRASS)
                     .randomTicks()
                     .noOcclusion()
+                    .isViewBlocking(ModBlocks::never)
+            ));
+
+    public static final DeferredBlock<Block> FLOWERING_LIMINALGAE_BLOCK = registerBlock("flowering_liminalgae_block",
+            () -> new Block(BlockBehaviour.Properties.of()
+                    .strength(.2f)
+                    .sound(SoundType.GRASS)
+                    .randomTicks()
+                    .noOcclusion()
+                    .isViewBlocking(ModBlocks::never)
             ));
     public static final DeferredBlock<Block> LIMINALGAE_BULB = registerBlock("liminalgae_bulb",
             () -> new Block(BlockBehaviour.Properties.of()
@@ -64,12 +78,6 @@ public class ModBlocks {
                     .sound(SoundType.DEEPSLATE_TILES)
                     .noLootTable()
             ));
-    public static final DeferredBlock<Block> ABYSSTEEL_BLOCK = registerBlock("abyssteel_block",
-            () -> new Block(BlockBehaviour.Properties.of()
-                    .strength(4f)
-                    .sound(SoundType.LODESTONE)
-                    .requiresCorrectToolForDrops()
-            ));
     public static final DeferredBlock<Block> CV_POOLTILE_BLOCK = registerBlock("cv_pooltile_block",
             () -> new EraserBlock(BlockBehaviour.Properties.of()
                     .strength(-1f)
@@ -92,10 +100,25 @@ public class ModBlocks {
                     .noLootTable()
             ));
 
+    public static final DeferredBlock<Block> ABYSSTEEL_GRATE = registerBlock("abyssteel_grate",
+            () -> new Block(BlockBehaviour.Properties.of()
+                    .strength(4f)
+                    .sound(SoundType.METAL)
+                    .requiresCorrectToolForDrops()
+            ));
+
+    public static final DeferredBlock<StairBlock> ABYSSTEEL_GRATE_STAIR = registerBlock("abyssteel_grate_stair",
+            () -> new StairBlock(ModBlocks.ABYSSTEEL_GRATE.get().defaultBlockState(),
+                        BlockBehaviour.Properties.of()
+                            .strength(4f)
+                            .sound(SoundType.METAL)
+                            .requiresCorrectToolForDrops()
+            ));
+
     public static final DeferredBlock<Block> ABYSSTEEL_BULB_BLOCK = registerBlock("abyssteel_bulb_block",
             () -> new AbysssteelBulbBlock(BlockBehaviour.Properties.of()
                     .strength(4f)
-                    .sound(SoundType.GLASS)
+                    .sound(SoundType.METAL)
                     .requiresCorrectToolForDrops()
                     .lightLevel(state -> state.getValue(AbysssteelBulbBlock.CLICKED) ? 15 : 0)
             ));

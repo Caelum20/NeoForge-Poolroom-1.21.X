@@ -20,7 +20,7 @@ import java.util.List;
 import java.util.Map;
 
 
-public class ChalkItem extends Item {
+public class ChalkItem extends Item {;
     private static final Map<Block, Block> MARKER_MAP =
             Map.of(
                     ModBlocks.POOLTILE_BLOCK.get(), ModBlocks.LC_POOLTILE_BLOCK.get(),

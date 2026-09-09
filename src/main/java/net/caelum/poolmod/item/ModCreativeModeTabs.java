@@ -34,7 +34,6 @@ public class ModCreativeModeTabs {
                         output.accept(ModItems.POOLFISH);
                         output.accept(ModItems.CHALK);
                         output.accept(ModItems.CHALK_DUST);
-                        output.accept(ModItems.CHALK_FUEL);
                     }).build());
     public static final Supplier<CreativeModeTab> POOLROOMS_LAYER_TWO_TAB = CREATIVE_MODE_TAB.register("poolrooms_layer_two_tab",
             () -> CreativeModeTab.builder().icon(() -> new ItemStack(ModItems.LIMINALGAE_LEAF.get()))
@@ -47,15 +46,14 @@ public class ModCreativeModeTabs {
                         output.accept(ModItems.LIMINALGAE_BUD);
                         output.accept(ModItems.CHALK);
                         output.accept(ModItems.CHALK_DUST);
-                        output.accept(ModItems.CHALK_FUEL);
                         output.accept(ModItems.DIVING_SUIT);
                     }).build());
     public static final Supplier<CreativeModeTab> POOLROOMS_DEEP_LAYER_TAB = CREATIVE_MODE_TAB.register("poolrooms_deep_layer_tab",
-            () -> CreativeModeTab.builder().icon(() -> new ItemStack(ModBlocks.ABYSSTEEL_BLOCK.get()))
+            () -> CreativeModeTab.builder().icon(() -> new ItemStack(ModBlocks.ABYSSTEEL_GRATE.get()))
                     .withTabsBefore(ResourceLocation.fromNamespaceAndPath(PoolMod.MOD_ID,"poolrooms_layer_two_tab"))
                     .title(Component.translatable("creativetab.poolmod.poolrooms_deep_layer"))
                     .displayItems((itemDisplayParameters, output) -> {
-                        output.accept(ModBlocks.ABYSSTEEL_BLOCK);
+                        output.accept(ModBlocks.ABYSSTEEL_GRATE);
                         output.accept(ModBlocks.LIMINALGAE_BULB);
                         output.accept(ModBlocks.ABYSSTEEL_BULB_BLOCK);
                         output.accept(ModItems.ABYSSTEEL);
