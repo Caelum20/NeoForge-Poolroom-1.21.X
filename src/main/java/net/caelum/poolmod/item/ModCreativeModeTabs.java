@@ -56,8 +56,6 @@ public class ModCreativeModeTabs {
                         output.accept(ModBlocks.ABYSSTEEL_GRATE);
                         output.accept(ModBlocks.LIMINALGAE_BULB);
                         output.accept(ModBlocks.ABYSSTEEL_BULB_BLOCK);
-                        output.accept(ModItems.ABYSSTEEL);
-                        output.accept(ModItems.ABYSSTEEL_PICKAXE);
                     })
                     .build());
 
