@@ -115,6 +115,13 @@ public class ModBlocks {
                             .requiresCorrectToolForDrops()
             ));
 
+    public static final DeferredBlock<SlabBlock> ABYSSTEEL_GRATE_SLAB = registerBlock("abyssteel_grate_slab",
+            () -> new SlabBlock(BlockBehaviour.Properties.of()
+                    .strength(4f)
+                    .sound(SoundType.METAL)
+                    .requiresCorrectToolForDrops()
+            ));
+
     public static final DeferredBlock<Block> ABYSSTEEL_BULB_BLOCK = registerBlock("abyssteel_bulb_block",
             () -> new AbysssteelBulbBlock(BlockBehaviour.Properties.of()
                     .strength(4f)

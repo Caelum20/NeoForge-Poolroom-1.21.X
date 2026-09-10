@@ -20,6 +20,8 @@ public class ModBlockTagProvider extends BlockTagsProvider {
     protected void addTags(HolderLookup.Provider provider) {
         tag(BlockTags.MINEABLE_WITH_PICKAXE)
                 .add(ModBlocks.ABYSSTEEL_GRATE.get())
+                .add(ModBlocks.ABYSSTEEL_GRATE_SLAB.get())
+                .add(ModBlocks.ABYSSTEEL_GRATE_STAIR.get())
                 .add(ModBlocks.ABYSSTEEL_BULB_BLOCK.get());
 
     }

@@ -21,9 +21,6 @@ public class ModItems {
     public static final DeferredItem<Item> CHALK_DUST = ITEMS.register("chalk_dust",
             () -> new FuelItem(new Item.Properties(), 2400
             ));
-    public static final DeferredItem<Item> ABYSSTEEL = ITEMS.register("abyssteel_ingot",
-            () -> new Item(new Item.Properties()
-            ));
 
     public static final DeferredItem<Item> CHALK = ITEMS.register("chalk",
             () -> new ChalkItem(new Item.Properties().durability(64)
@@ -42,11 +39,6 @@ public class ModItems {
 
     public static final DeferredItem<Item> LIMINALGAE_LEAF = ITEMS.register("liminalgae_leaf",
             () -> new FuelItem(new Item.Properties(), 1200
-            ));
-
-    public static final DeferredItem<PickaxeItem> ABYSSTEEL_PICKAXE = ITEMS.register("abyssteel_pickaxe",
-            () -> new PickaxeItem(ModToolTiers.STEEL, new Item.Properties()
-                    .attributes(PickaxeItem.createAttributes(ModToolTiers.STEEL, 1f, -2.8f))
             ));
 
     public static final DeferredItem<ArmorItem> DIVING_SUIT = ITEMS.register("diving_suit",
