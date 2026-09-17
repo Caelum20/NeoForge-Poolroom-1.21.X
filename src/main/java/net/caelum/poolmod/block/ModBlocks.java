@@ -128,7 +128,7 @@ public class ModBlocks {
                     .strength(4f)
                     .sound(SoundType.METAL)
                     .requiresCorrectToolForDrops()
-                    .lightLevel(state -> state.getValue(AbysssteelBulbBlock.CLICKED) ? 15 : 0)
+                    .lightLevel(state -> state.getValue(AbysssteelBulbBlock.LIT) ? 15 : 0)
             ));
 
 public static final DeferredBlock<ChainBlock> ABYSSTEEL_CHAIN = registerBlock("abyssteel_chain",
