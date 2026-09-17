@@ -15,7 +15,6 @@ public class ModItemModelProvider extends ItemModelProvider {
     protected void registerModels() {
         basicItem(ModItems.LIMINALGAE_BUD.get());
         basicItem(ModItems.LIMINALGAE_LEAF.get());
-        //basicItem(ModItems.ABYSSTEEL.get());
         basicItem(ModItems.POOLFISH.get());
         basicItem(ModItems.CHALK_DUST.get());
     }

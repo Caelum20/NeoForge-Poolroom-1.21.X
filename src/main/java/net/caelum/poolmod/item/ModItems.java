@@ -41,10 +41,6 @@ public class ModItems {
             () -> new FuelItem(new Item.Properties(), 1200
             ));
 
-    public static final DeferredItem<ArmorItem> DIVING_SUIT = ITEMS.register("diving_suit",
-            () -> new ArmorItem(ModArmorMaterials.ABYSSTEEL_ARMOR_MATERIAL, ArmorItem.Type.CHESTPLATE,
-                    new  Item.Properties().durability(ArmorItem.Type.BODY.getDurability(-1))
-            ));
 
 
     public static void register(IEventBus eventBus) {

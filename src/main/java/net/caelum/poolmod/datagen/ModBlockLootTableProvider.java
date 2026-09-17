@@ -29,6 +29,9 @@ public class ModBlockLootTableProvider  extends BlockLootSubProvider {
         dropSelf(ModBlocks.ABYSSTEEL_GRATE.get());
         dropSelf(ModBlocks.ABYSSTEEL_BULB_BLOCK.get());
         dropSelf(ModBlocks.LIMINALGAE_BULB.get());
+        dropSelf(ModBlocks.ABYSSTEEL_GRATE_SLAB.get());
+        dropSelf(ModBlocks.ABYSSTEEL_GRATE_STAIR.get());
+        dropSelf(ModBlocks.ABYSSTEEL_CHAIN.get());
 
         add(ModBlocks.LIMINALGAE_BLOCK.get(),
                 block -> createMultipleOreDrops(ModBlocks.LIMINALGAE_BLOCK.get(), ModItems.LIMINALGAE_LEAF.get(), 2, 5));

@@ -23,10 +23,11 @@
   "block.poolmod.liminalgae_block": "Liminalgae Leaf Block",
   "block.poolmod.liminalgae_bulb": "Liminalgae Bulb",
   "block.poolmod.abyssteel_grate": "Abyssteel Grate",
+  "block.poolmod.abyssteel_grate_slab": "Abyssteel Grate Slab",
+  "block.poolmod.abyssteel_grate_stair": "Abyssteel Grate Stairs",
   "block.poolmod.abyssteel_bulb_block": "Abyssteel Light",
 
   "creativetab.poolmod.poolrooms_layer_one": "Poolroom Layer 1",
-  "creativetab.poolmod.poolrooms_layer_two": "Poolroom Layer 2",
   "creativetab.poolmod.poolrooms_deep_layer": "Poolroom Deep Layer",
 
   "tooltip.poolmod.eraser_block.tooltip": "This block dissolves chalk.",

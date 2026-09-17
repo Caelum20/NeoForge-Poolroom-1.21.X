@@ -1,5 +1,6 @@
 package net.caelum.poolmod.block;
 
+import com.sun.net.httpserver.Filter;
 import net.caelum.poolmod.PoolMod;
 import net.caelum.poolmod.block.custom.AbysssteelBulbBlock;
 import net.caelum.poolmod.block.custom.EraserBlock;
@@ -128,6 +129,13 @@ public class ModBlocks {
                     .sound(SoundType.METAL)
                     .requiresCorrectToolForDrops()
                     .lightLevel(state -> state.getValue(AbysssteelBulbBlock.CLICKED) ? 15 : 0)
+            ));
+
+public static final DeferredBlock<ChainBlock> ABYSSTEEL_CHAIN = registerBlock("abyssteel_chain",
+            () -> new ChainBlock(BlockBehaviour.Properties.of()
+                    .strength(3.5f)
+                    .sound(SoundType.CHAIN)
+                    .requiresCorrectToolForDrops()
             ));
 
     private static <T extends Block> DeferredBlock<T> registerBlock(String name, Supplier<T> block) {

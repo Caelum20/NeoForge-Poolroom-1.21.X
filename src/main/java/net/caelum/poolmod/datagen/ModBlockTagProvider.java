@@ -22,7 +22,14 @@ public class ModBlockTagProvider extends BlockTagsProvider {
                 .add(ModBlocks.ABYSSTEEL_GRATE.get())
                 .add(ModBlocks.ABYSSTEEL_GRATE_SLAB.get())
                 .add(ModBlocks.ABYSSTEEL_GRATE_STAIR.get())
-                .add(ModBlocks.ABYSSTEEL_BULB_BLOCK.get());
+                .add(ModBlocks.ABYSSTEEL_BULB_BLOCK.get())
+                .add(ModBlocks.ABYSSTEEL_CHAIN.get());
 
+        tag(BlockTags.NEEDS_DIAMOND_TOOL)
+                .add(ModBlocks.ABYSSTEEL_GRATE.get())
+                .add(ModBlocks.ABYSSTEEL_GRATE_SLAB.get())
+                .add(ModBlocks.ABYSSTEEL_GRATE_STAIR.get())
+                .add(ModBlocks.ABYSSTEEL_BULB_BLOCK.get())
+                .add(ModBlocks.ABYSSTEEL_CHAIN.get());
     }
 }
