@@ -17,5 +17,6 @@ public class ModItemModelProvider extends ItemModelProvider {
         basicItem(ModItems.LIMINALGAE_LEAF.get());
         basicItem(ModItems.POOLFISH.get());
         basicItem(ModItems.CHALK_DUST.get());
+        basicItem(ModItems.CHALK.get());
     }
 }

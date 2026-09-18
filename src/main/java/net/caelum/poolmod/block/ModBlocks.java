@@ -12,6 +12,7 @@ import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.BlockState;
+import net.minecraft.world.level.block.state.properties.BlockSetType;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredBlock;
 import net.neoforged.neoforge.registries.DeferredRegister;
@@ -27,7 +28,7 @@ public class ModBlocks {
     }
 
     public static final DeferredBlock<Block> LIMINALGAE_BLOCK = registerBlock("liminalgae_block",
-            () -> new Block(BlockBehaviour.Properties.of()
+            () -> new TransparentBlock(BlockBehaviour.Properties.of()
                     .strength(.2f)
                     .sound(SoundType.GRASS)
                     .randomTicks()
@@ -36,7 +37,7 @@ public class ModBlocks {
             ));
 
     public static final DeferredBlock<Block> FLOWERING_LIMINALGAE_BLOCK = registerBlock("flowering_liminalgae_block",
-            () -> new Block(BlockBehaviour.Properties.of()
+            () -> new TransparentBlock(BlockBehaviour.Properties.of()
                     .strength(.2f)
                     .sound(SoundType.GRASS)
                     .randomTicks()
@@ -102,10 +103,12 @@ public class ModBlocks {
             ));
 
     public static final DeferredBlock<Block> ABYSSTEEL_GRATE = registerBlock("abyssteel_grate",
-            () -> new Block(BlockBehaviour.Properties.of()
+            () -> new TransparentBlock(BlockBehaviour.Properties.of()
                     .strength(4f)
                     .sound(SoundType.METAL)
                     .requiresCorrectToolForDrops()
+                    .noOcclusion()
+                    .isViewBlocking(ModBlocks::never)
             ));
 
     public static final DeferredBlock<StairBlock> ABYSSTEEL_GRATE_STAIR = registerBlock("abyssteel_grate_stair",
@@ -114,6 +117,8 @@ public class ModBlocks {
                             .strength(4f)
                             .sound(SoundType.METAL)
                             .requiresCorrectToolForDrops()
+                            .noOcclusion()
+                            .isViewBlocking(ModBlocks::never)
             ));
 
     public static final DeferredBlock<SlabBlock> ABYSSTEEL_GRATE_SLAB = registerBlock("abyssteel_grate_slab",
@@ -121,6 +126,8 @@ public class ModBlocks {
                     .strength(4f)
                     .sound(SoundType.METAL)
                     .requiresCorrectToolForDrops()
+                    .noOcclusion()
+                    .isViewBlocking(ModBlocks::never)
             ));
 
     public static final DeferredBlock<Block> ABYSSTEEL_BULB_BLOCK = registerBlock("abyssteel_bulb_block",
@@ -131,11 +138,23 @@ public class ModBlocks {
                     .lightLevel(state -> state.getValue(AbysssteelBulbBlock.LIT) ? 15 : 0)
             ));
 
-public static final DeferredBlock<ChainBlock> ABYSSTEEL_CHAIN = registerBlock("abyssteel_chain",
+    public static final DeferredBlock<ChainBlock> ABYSSTEEL_CHAIN = registerBlock("abyssteel_chain",
             () -> new ChainBlock(BlockBehaviour.Properties.of()
                     .strength(3.5f)
                     .sound(SoundType.CHAIN)
                     .requiresCorrectToolForDrops()
+                    .noOcclusion()
+                    .isViewBlocking(ModBlocks::never)
+            ));
+
+    public static final DeferredBlock<DoorBlock> ABYSSTEEL_DOOR = registerBlock("abyssteel_door",
+            () -> new DoorBlock(BlockSetType.IRON,
+                    BlockBehaviour.Properties.of()
+                            .strength(4f)
+                            .sound(SoundType.METAL)
+                            .requiresCorrectToolForDrops()
+                            .noOcclusion()
+                            .isViewBlocking(ModBlocks::never)
             ));
 
     private static <T extends Block> DeferredBlock<T> registerBlock(String name, Supplier<T> block) {

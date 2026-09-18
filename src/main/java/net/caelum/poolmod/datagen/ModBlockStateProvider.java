@@ -23,6 +23,7 @@ public class ModBlockStateProvider extends BlockStateProvider {
         blockWithItem(ModBlocks.LC_POOLTILE_BLOCK);
         blockWithItem(ModBlocks.DC_POOLTILE_BLOCK);
         blockWithItem(ModBlocks.RC_POOLTILE_BLOCK);
+        blockWithItem(ModBlocks.ABYSSTEEL_BULB_BLOCK);
     }
 
     private void blockWithItem(DeferredBlock<?> deferredBlock) {

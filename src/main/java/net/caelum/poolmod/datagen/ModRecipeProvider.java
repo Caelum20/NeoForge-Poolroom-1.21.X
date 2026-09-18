@@ -23,7 +23,8 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .pattern("DDD")
                 .pattern("DDD")
                 .pattern("DDD")
-                .define('D', ModItems.CHALK_DUST.get());
-
+                .define('D', ModItems.CHALK_DUST.get())
+                .unlockedBy("has_dust", has(ModItems.CHALK_DUST.get()))
+                .save(recipeOutput);
     }
 }
