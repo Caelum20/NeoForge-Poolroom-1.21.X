@@ -147,8 +147,8 @@ public class ModBlocks {
                     .isViewBlocking(ModBlocks::never)
             ));
 
-    public static final DeferredBlock<DoorBlock> ABYSSTEEL_DOOR = registerBlock("abyssteel_door",
-            () -> new DoorBlock(BlockSetType.IRON,
+    public static final DeferredBlock<TrapDoorBlock> ABYSSTEEL_TRAPDOOR = registerBlock("abyssteel_trapdoor",
+            () -> new TrapDoorBlock(BlockSetType.IRON,
                     BlockBehaviour.Properties.of()
                             .strength(4f)
                             .sound(SoundType.METAL)

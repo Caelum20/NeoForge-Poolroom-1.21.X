@@ -12,7 +12,6 @@ import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.StateDefinition;
 import net.minecraft.world.level.block.state.properties.BooleanProperty;
-import net.minecraft.world.level.block.state.properties.Property;
 
 import javax.annotation.Nullable;
 
@@ -26,7 +25,7 @@ public class AbysssteelBulbBlock extends Block {
 
     public AbysssteelBulbBlock(BlockBehaviour.Properties properties) {
         super(properties);
-        this.registerDefaultState((BlockState) this.defaultBlockState().setValue(LIT, false));
+        this.registerDefaultState(this.defaultBlockState().setValue(LIT, false));
     }
 
     @Nullable
@@ -36,25 +35,25 @@ public class AbysssteelBulbBlock extends Block {
 
     protected void neighborChanged(BlockState state, Level level, BlockPos pos, BlockPos fromPos, Boolean isMoving) {
         if(!level.isClientSide) {
-            boolean flag = (Boolean) state.getValue(LIT);
+            boolean flag = state.getValue(LIT);
             if(flag != level.hasNeighborSignal(pos)) {
                 if(flag) {
                     level.scheduleTick(pos, this, 4);
                 } else {
-                    level.setBlock(pos, (BlockState) state.cycle(LIT), 2);
+                    level.setBlock(pos, state.cycle(LIT), 2);
                 }
             }
         }
     }
 
     protected void tick(BlockState state, ServerLevel level, BlockPos pos, RandomSource random) {
-        if((Boolean) state.getValue(LIT) && !level.hasNeighborSignal(pos)) {
-            level.setBlock(pos, (BlockState) state.cycle(LIT), 2);
+        if(state.getValue(LIT) && !level.hasNeighborSignal(pos)) {
+            level.setBlock(pos, state.cycle(LIT), 2);
         }
     }
 
     protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> builder) {
-        builder.add(new Property[]{LIT});
+        builder.add(LIT);
     }
 
     static {

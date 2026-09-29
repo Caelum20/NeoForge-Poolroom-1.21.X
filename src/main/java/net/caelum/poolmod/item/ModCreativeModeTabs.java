@@ -43,7 +43,7 @@ public class ModCreativeModeTabs {
                         output.accept(ModBlocks.ABYSSTEEL_GRATE);
                         output.accept(ModBlocks.ABYSSTEEL_GRATE_SLAB);
                         output.accept(ModBlocks.ABYSSTEEL_GRATE_STAIR);
-                        output.accept(ModBlocks.ABYSSTEEL_DOOR);
+                        output.accept(ModBlocks.ABYSSTEEL_TRAPDOOR);
                         output.accept(ModBlocks.LIMINALGAE_BULB);
                         output.accept(ModBlocks.ABYSSTEEL_BULB_BLOCK);
                         output.accept(ModBlocks.ABYSSTEEL_CHAIN);
