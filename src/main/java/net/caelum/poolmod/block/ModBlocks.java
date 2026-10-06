@@ -1,6 +1,5 @@
 package net.caelum.poolmod.block;
 
-import com.sun.net.httpserver.Filter;
 import net.caelum.poolmod.PoolMod;
 import net.caelum.poolmod.block.custom.AbysssteelBulbBlock;
 import net.caelum.poolmod.block.custom.EraserBlock;
@@ -28,21 +27,21 @@ public class ModBlocks {
     }
 
     public static final DeferredBlock<Block> LIMINALGAE_BLOCK = registerBlock("liminalgae_block",
-            () -> new TransparentBlock(BlockBehaviour.Properties.of()
+            () -> new Block(BlockBehaviour.Properties.of()
                     .strength(.2f)
                     .sound(SoundType.GRASS)
-                    .randomTicks()
                     .noOcclusion()
                     .isViewBlocking(ModBlocks::never)
+                    .isSuffocating(ModBlocks::never)
             ));
 
     public static final DeferredBlock<Block> FLOWERING_LIMINALGAE_BLOCK = registerBlock("flowering_liminalgae_block",
-            () -> new TransparentBlock(BlockBehaviour.Properties.of()
+            () -> new Block(BlockBehaviour.Properties.of()
                     .strength(.2f)
                     .sound(SoundType.GRASS)
-                    .randomTicks()
                     .noOcclusion()
                     .isViewBlocking(ModBlocks::never)
+                    .isSuffocating(ModBlocks::never)
             ));
     public static final DeferredBlock<Block> LIMINALGAE_BULB = registerBlock("liminalgae_bulb",
             () -> new Block(BlockBehaviour.Properties.of()

@@ -20,9 +20,7 @@ public class ModCreativeModeTabs {
             () -> CreativeModeTab.builder().icon(() -> new ItemStack(ModBlocks.POOLTILE_BLOCK.get()))
                     .title(Component.translatable("creativetab.poolmod.poolrooms_layer_one"))
                     .displayItems((itemDisplayParameters, output) -> {
-                        output.accept(ModBlocks.POOLTILE_BLOCK);
-                        output.accept(ModBlocks.POOLTILE_STAIR);
-                        output.accept(ModBlocks.POOLTILE_SLAB);
+                        output.accept(ModBlocks.FLOWERING_LIMINALGAE_BLOCK);
                         output.accept(ModBlocks.DC_POOLTILE_BLOCK);
                         output.accept(ModBlocks.LC_POOLTILE_BLOCK);
                         output.accept(ModBlocks.RC_POOLTILE_BLOCK);
@@ -30,22 +28,25 @@ public class ModCreativeModeTabs {
                         output.accept(ModBlocks.CV_POOLTILE_BLOCK);
                         output.accept(ModBlocks.LIMINALGAE_BLOCK);
                         output.accept(ModItems.LIMINALGAE_LEAF);
+                        output.accept(ModBlocks.POOLTILE_BLOCK);
+                        output.accept(ModBlocks.POOLTILE_STAIR);
+                        output.accept(ModBlocks.POOLTILE_SLAB);
                         output.accept(ModItems.LIMINALGAE_BUD);
+                        output.accept(ModItems.CHALK_DUST);
                         output.accept(ModItems.POOLFISH);
                         output.accept(ModItems.CHALK);
-                        output.accept(ModItems.CHALK_DUST);
                     }).build());
     public static final Supplier<CreativeModeTab> POOLROOMS_DEEP_LAYER_TAB = CREATIVE_MODE_TAB.register("poolrooms_deep_layer_tab",
             () -> CreativeModeTab.builder().icon(() -> new ItemStack(ModBlocks.ABYSSTEEL_GRATE.get()))
                     .withTabsBefore(ResourceLocation.fromNamespaceAndPath(PoolMod.MOD_ID,"poolrooms_layer_one_tab"))
                     .title(Component.translatable("creativetab.poolmod.poolrooms_deep_layer"))
                     .displayItems((itemDisplayParameters, output) -> {
-                        output.accept(ModBlocks.ABYSSTEEL_GRATE);
-                        output.accept(ModBlocks.ABYSSTEEL_GRATE_SLAB);
                         output.accept(ModBlocks.ABYSSTEEL_GRATE_STAIR);
-                        output.accept(ModBlocks.ABYSSTEEL_TRAPDOOR);
-                        output.accept(ModBlocks.LIMINALGAE_BULB);
+                        output.accept(ModBlocks.ABYSSTEEL_GRATE_SLAB);
                         output.accept(ModBlocks.ABYSSTEEL_BULB_BLOCK);
+                        output.accept(ModBlocks.ABYSSTEEL_TRAPDOOR);
+                        output.accept(ModBlocks.ABYSSTEEL_GRATE);
+                        output.accept(ModBlocks.LIMINALGAE_BULB);
                         output.accept(ModBlocks.ABYSSTEEL_CHAIN);
                     })
                     .build());

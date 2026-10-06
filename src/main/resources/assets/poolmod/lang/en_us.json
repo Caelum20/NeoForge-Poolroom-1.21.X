@@ -5,10 +5,6 @@
   "item.poolmod.chalk_fuel": "Chalk Fuel",
   "item.poolmod.abyssteel_ingot": "Abyssteel Ingot",
 
-  "item.poolmod.abyssteel_pickaxe": "Abyssteel Pickaxe",
-
-  "item.poolmod.diving_suit": "Diving Suit",
-
   "item.poolmod.poolfish": "Poolfish",
   "item.poolmod.liminalgae_bud": "Liminalgae Bud",
 
@@ -26,6 +22,7 @@
   "block.poolmod.abyssteel_grate_slab": "Abyssteel Grate Slab",
   "block.poolmod.abyssteel_grate_stair": "Abyssteel Grate Stairs",
   "block.poolmod.abyssteel_bulb_block": "Abyssteel Light",
+  "block.poolmod.flowering_liminalgae_block": "Flowering Liminalgae",
 
   "creativetab.poolmod.poolrooms_layer_one": "Poolroom Layer 1",
   "creativetab.poolmod.poolrooms_deep_layer": "Poolroom Deep Layer",

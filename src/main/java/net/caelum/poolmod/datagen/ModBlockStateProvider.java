@@ -17,7 +17,7 @@ public class ModBlockStateProvider extends BlockStateProvider {
     protected void registerStatesAndModels() {
         blockWithItem(ModBlocks.ABYSSTEEL_GRATE);
         blockWithItem(ModBlocks.LIMINALGAE_BLOCK);
-        //blockWithItem(ModBlocks.FLOWERING_LIMINALGAE_BLOCK);
+        blockWithItem(ModBlocks.FLOWERING_LIMINALGAE_BLOCK);
         blockWithItem(ModBlocks.POOLTILE_BLOCK);
         blockWithItem(ModBlocks.CV_POOLTILE_BLOCK);
         blockWithItem(ModBlocks.UC_POOLTILE_BLOCK);
