@@ -42,7 +42,6 @@ public class ModItems {
             ));
 
 
-
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);
     }

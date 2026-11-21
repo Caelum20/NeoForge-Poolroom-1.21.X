@@ -4,7 +4,7 @@ import net.caelum.poolmod.PoolMod;
 import net.caelum.poolmod.block.ModBlocks;
 import net.minecraft.data.PackOutput;
 import net.minecraft.resources.ResourceLocation;
-import net.minecraft.world.level.block.SlabBlock;
+import net.neoforged.fml.common.Mod;
 import net.neoforged.neoforge.client.model.generators.BlockStateProvider;
 import net.neoforged.neoforge.client.model.generators.ModelFile;
 import net.neoforged.neoforge.common.data.ExistingFileHelper;
@@ -33,12 +33,13 @@ public class ModBlockStateProvider extends BlockStateProvider {
         blockWithItem(ModBlocks.ABYSSTEEL_BULB_BLOCK);
 
         stairsBlock(ModBlocks.POOLTILE_STAIR.get(), blockTexture(ModBlocks.POOLTILE_BLOCK.get()));
-        slabBlock(ModBlocks.ABYSSTEEL_GRATE_SLAB.get(), blockTexture(ModBlocks.ABYSSTEEL_GRATE.get()), blockTexture(ModBlocks.ABYSSTEEL_GRATE.get()));
+        slabBlock(ModBlocks.POOLTILE_SLAB.get(), blockTexture(ModBlocks.POOLTILE_BLOCK.get()), blockTexture(ModBlocks.POOLTILE_BLOCK.get()));
 
         stairsBlockWithRenderType(ModBlocks.ABYSSTEEL_GRATE_STAIR.get(), blockTexture(ModBlocks.ABYSSTEEL_GRATE.get()), "cutout");
         slabBlock(ModBlocks.ABYSSTEEL_GRATE_SLAB.get(), bottom, top, doubleSlab);
         trapdoorBlockWithRenderType(ModBlocks.ABYSSTEEL_TRAPDOOR.get(), modLoc("block/abyssteel_trapdoor"), true,"translucent");
 
+        blockItem(ModBlocks.LEVEL_ONE_SKY);
         blockItem(ModBlocks.ABYSSTEEL_TRAPDOOR, "_bottom");
         blockItem(ModBlocks.ABYSSTEEL_GRATE_SLAB);
         blockItem(ModBlocks.ABYSSTEEL_GRATE_STAIR);

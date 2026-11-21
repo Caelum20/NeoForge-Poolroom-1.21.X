@@ -156,6 +156,14 @@ public class ModBlocks {
                             .isViewBlocking(ModBlocks::never)
             ));
 
+    public static final DeferredBlock<Block> LEVEL_ONE_SKY = registerBlock("one_sky",
+            () -> new Block(BlockBehaviour.Properties.of()
+                    .strength(-1f)
+                    .noLootTable()
+                    .noOcclusion()
+                    .noCollission()
+            ));
+
     private static <T extends Block> DeferredBlock<T> registerBlock(String name, Supplier<T> block) {
         DeferredBlock<T> toReturn = BLOCKS.register(name, block);
         registerBlockItem(name, toReturn);
